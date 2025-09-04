@@ -1,14 +1,9 @@
-import { NextConfig } from "next";
-
-const isProd = process.env.NODE_ENV === "production";
-
-const nextConfig: NextConfig = {
-  output: "export",
-  basePath: isProd ? "/mousumi_official_business_app" : "",
-  assetPrefix: isProd ? "/mousumi_official_business_app/" : "",
-  allowedDevOrigins: ["10.176.202.104"],
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  output: 'export', // Required for static export
+  basePath: '/my-mousumi_official_business_app', // Replace 'my-portfolio' with your repo name
+  // assetPrefix: '/my-portfolio/'
 };
 
-export default nextConfig;
-
-
+module.exports = nextConfig;

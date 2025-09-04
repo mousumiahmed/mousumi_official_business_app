@@ -2,13 +2,14 @@
   "name": "mousumi_official_business_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/mousumiahmed/mousumi_official_business_app",
   "scripts": {
-    "dev": "next dev --turbopack && next export",
+    "dev": "next dev --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "build": "next build --turbopack",
-    "deploy": "next build && next export && main -d out"
+    "export": "next export",
+    "build": "next build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -30,6 +31,7 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
+    "gh-pages": "^6.3.0",
     "main": "^1000.0.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.12",

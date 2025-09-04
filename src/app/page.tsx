@@ -51,7 +51,15 @@ export default function PortfolioBusiness() {
         <div className="grid md:grid-cols-3 gap-6">
           {[1, 2, 3].map((project) => (
             <motion.div whileHover={{ scale: 1.05 }} key={project} className="rounded-2xl overflow-hidden shadow-md bg-white">
-              <Image src={`https://via.placeholder.com/400x250?text=Project+${project}`} alt={`Project ${project}`} className="w-full h-48 object-cover" />
+              {/* <Image src={`https://via.placeholder.com/400x250?text=Project+${project}`} alt={`Project ${project}`} className="w-full h-48 object-cover" /> */}
+              <Image
+                    src={`https://via.placeholder.com/400x250?text=Project+${project}`}
+                    alt={`Project ${project}`}
+                    width={400}   // required
+                    height={250}  // required
+                    className="object-cover"
+                  />
+
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">Project {project}</h3>
                 <p className="text-gray-600">Short description of project {project}.</p>
